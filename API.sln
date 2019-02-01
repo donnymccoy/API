@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{1C1D3366-B9AB-460E-B8D8-493826CCD904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Tests", "API.Tests\API.Tests.csproj", "{BD93001E-6AF3-4AB8-A599-4360C3932661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "..\DTO\DTO\DTO.csproj", "{9018BC1C-52A0-47C0-9E58-5AA79EB85882}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C1D3366-B9AB-460E-B8D8-493826CCD904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1D3366-B9AB-460E-B8D8-493826CCD904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1D3366-B9AB-460E-B8D8-493826CCD904}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{1C1D3366-B9AB-460E-B8D8-493826CCD904}.QA|Any CPU.Build.0 = QA|Any CPU
+		{1C1D3366-B9AB-460E-B8D8-493826CCD904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1D3366-B9AB-460E-B8D8-493826CCD904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD93001E-6AF3-4AB8-A599-4360C3932661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD93001E-6AF3-4AB8-A599-4360C3932661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD93001E-6AF3-4AB8-A599-4360C3932661}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{BD93001E-6AF3-4AB8-A599-4360C3932661}.QA|Any CPU.Build.0 = QA|Any CPU
+		{BD93001E-6AF3-4AB8-A599-4360C3932661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD93001E-6AF3-4AB8-A599-4360C3932661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9018BC1C-52A0-47C0-9E58-5AA79EB85882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9018BC1C-52A0-47C0-9E58-5AA79EB85882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9018BC1C-52A0-47C0-9E58-5AA79EB85882}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{9018BC1C-52A0-47C0-9E58-5AA79EB85882}.QA|Any CPU.Build.0 = QA|Any CPU
+		{9018BC1C-52A0-47C0-9E58-5AA79EB85882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9018BC1C-52A0-47C0-9E58-5AA79EB85882}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
