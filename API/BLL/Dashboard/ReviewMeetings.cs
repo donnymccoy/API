@@ -69,7 +69,7 @@ namespace LifeSpan.API.BLL.Dashboard
 
                     // Filter the result list to only include reports where MeetingDate is >= today AND ReportDone is false //
                     result =
-                        result.Where(t => t.ReportReceivedFlag == false && t.MeetingDate >= DateTime.Today)
+                        result.Where(t => t.ReportReceivedFlag == false && t.MeetingDate >= DateTime.Today && t.ReportDueDate <= DateTime.Today)
                             .OrderByDescending(t => t.MeetingDate).ThenBy(t => t.ClientName)
                             .ToList();
 

@@ -143,8 +143,10 @@ namespace LifeSpan.API.BLL.Dashboard
 
 
         /// <summary>Get active clients not assigned a physician.</summary>
+        /// <param name="includeAssistant">Used to specify whether to include assistant therapists in the query</param>
+        /// <param name="employeeId">EmployeeId to query for.  If 0, include ALL records.</param>
         /// <returns>List of MissingPhysicians</returns>
-        public List<MissingPhysician> MissingPhysicians()
+        public List<MissingPhysician> MissingPhysicians(bool includeAssistant, int employeeId)
         {
             List<MissingPhysician> result = new List<MissingPhysician>();
 
@@ -152,7 +154,7 @@ namespace LifeSpan.API.BLL.Dashboard
             {
                 DAL.Dashboard.ClientDocuments dal = new DAL.Dashboard.ClientDocuments();
 
-                System.Data.DataTable dt = dal.MissingPhysicians();
+                System.Data.DataTable dt = dal.MissingPhysicians(includeAssistant, employeeId);
                 if (dt != null && dt.Rows.Count != 0)
                 {
                     foreach (System.Data.DataRow dataRow in dt.Rows)

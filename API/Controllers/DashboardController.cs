@@ -525,7 +525,7 @@ namespace Lifespan.API.Controllers
         [ResponseType(typeof(LifeSpan.DTO.Dashboard.MissingPhysicianResponse))]
         [HttpGet]
         //[Authorize]
-        public HttpResponseMessage MissingPhysicians(APIEnums.RollupLevel rollupLevel)
+        public HttpResponseMessage MissingPhysicians(APIEnums.RollupLevel rollupLevel, APIEnums.IncludeAssistant includeAssistant, int employeeId)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -538,7 +538,7 @@ namespace Lifespan.API.Controllers
             {
                 ClientDocuments bll = new ClientDocuments();
 
-                result.MissingPhysicians = bll.MissingPhysicians();
+                result.MissingPhysicians = bll.MissingPhysicians((includeAssistant == APIEnums.IncludeAssistant.True ? true : false), employeeId);
 
 
                 // Prepare result output //

@@ -89,8 +89,10 @@ namespace LifeSpan.API.DAL.Dashboard
 
 
         /// <summary>Get active clients not assigned a physician.</summary>
+        /// <param name="includeAssistant">Used to specify whether to include assistant therapists in the query</param>
+        /// <param name="employeeId">EmployeeId to query for.  If 0, include ALL records.</param>
         /// <returns>List of MissingPhysicians</returns>
-        public DataTable MissingPhysicians()
+        public DataTable MissingPhysicians(bool includeAssistant, int employeeId)
         {
             DataTable dt = new DataTable();
 
@@ -98,6 +100,8 @@ namespace LifeSpan.API.DAL.Dashboard
             {
                 string command = "GetMissingPhysicians";
                 List<System.Data.OleDb.OleDbParameter> parameters = new List<System.Data.OleDb.OleDbParameter>();
+                parameters.Add(new System.Data.OleDb.OleDbParameter("@IncludeAssistant", includeAssistant));
+                parameters.Add(new System.Data.OleDb.OleDbParameter("@EmployeeId", employeeId));
 
                 dt = Utility.Data.ExecuteQueryDataTable(command, ref parameters, Utility.DBConnections.dataDb);
 
